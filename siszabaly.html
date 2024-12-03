@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vargha Benjámin">
+    <meta name="description" content="Főoldal, sipályák oldala.">
+    <title>siszabaly</title>
+    <link rel="stylesheet" href="css/stiluslap.css">
+    <link rel="icon" href="képek/ikon.webp" type="image/x-icon">
+    
+</head>
+<body>
+    <nav class="fejlec">
+        <div class="logo"><a href="index.html">Sítúra</a></div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="index.html">Főmenü</a>
+            <a href="hutte.html">Hütték</a>
+            <a href="#" class="active">Sí szabályok</a>
+            <a href="Kepgaleria.html">Képgaléria</a>
+        </div>
+    </nav>
+    <h1 class="siszabaly_fejlec">Si Szabályok</h1>
+    <div class="szabalyok">
+        <div class="szabaly">
+            <img src="Képek/siszabaly/odafigyeles.png" alt="odafigyelés">
+            <div class="szabalyok_szoveg">
+                <p>Légy tekintettel a többi sízőre! Ne veszélyeztess másokat a pályán!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/megfelelo_sebesseg.png" alt="megfeelő sebesség">
+            <div class="szabalyok_szoveg">
+                <p>A sítudásodnak, terepnek és az időjárásnak megfelelő sebességgel síelj!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/kikerules.png" alt="kikerülés">
+            <div class="szabalyok_szoveg">
+                <p>A hátulról jövőnek kell kikerülni az előtte haladókat.</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/elozes.png" alt="">
+            <div class="szabalyok_szoveg">
+                <p>Úgy előzz meg másokat, hogy közben ne zavard meg őket!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/korulnezes.png" alt="Körülnézés">
+            <div class="szabalyok_szoveg">
+                <p>Mielőtt elindulsz a pályán, nézz alaposan körül minden irányba!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/megallas.png" alt="Megállás a pályán">
+            <div class="szabalyok_szoveg">
+                <p>A pálya szélén állj meg, jól belátható helyen!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/gyalogos_kozlekedes.png" alt="Gyalogos közlekedés">
+            <div class="szabalyok_szoveg">
+                <p>A fejutáshoz és legyalogláshoz csak a pálya szélét használd!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/tablak.png" alt="Táblák jelentése">
+            <div class="szabalyok_szoveg">
+                <p>Tartsd be a pályaüzemeltető által hozott szabályokat!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/segitsegnyujtas.png" alt="Segítségnyújtás">
+            <div class="szabalyok_szoveg">
+                <p>Ha balesetet látsz, nyújts segítséget!</p>
+            </div>
+        </div>
+        <div class="szabaly">
+            <img src="Képek/siszabaly/azonositas.png" alt="Azonosítás">
+            <div class="szabalyok_szoveg">
+                <p>Mindig legyen nálad fényképes igazolvány!</p>
+            </div>
+        </div>
+    </div> 
+    
+    <form id="skiSurvey" class="survey-form-container">
+        <h1>Sízési Szabályok Kérdőív</h1>
+        <ol>
+            <!-- 1. Egyszerű Igen/Nem kérdés -->
+            <li>
+                <p>Minden síző köteles tekintettel lenni másokra a pályán?</p>
+                <label><input type="radio" name="consideration" value="yes" id="koteles"> Igen</label>
+                <label><input type="radio" name="consideration" value="no" id="nemkoteles"> Nem</label>
+            </li>
+            
+            <!-- 2. Legördülő menü a sebességről -->
+            <li>
+                <p>Milyen sebességgel kell síelni a pályán?</p>
+                <select name="sebesseg" id="sebesseg">
+                    <option value="appropriate" >A terepnek és a sítudásnak megfelelően</option>
+                    <option value="fast" >Amilyen gyorsan csak lehet</option>
+                    <option value="slow" >Nagyon lassan</option>
+                </select>
+            </li>
+    
+            <!-- 3. Szövegbeviteli mező beugratós kérdés -->
+            <li>
+                <p>Ki köteles kikerülni a pályán az előtte haladókat? (Írd be!)</p>
+                <input type="text" name="yield" placeholder="Válasz" id="ki">
+            </li>
+    
+            <!-- 4. Többválasztós checkbox a szabályokról -->
+            <li>
+                <p>Melyik állítás igaz a síelési szabályokra? (Több választ is megjelölhetsz.)</p>
+                <label><input type="checkbox" name="rules" value="help" id="segits">Segíts baleset esetén</label><br>
+                <label><input type="checkbox" name="rules" value="stop" id="stop">Állj meg a pálya közepén</label><br>
+                <label><input type="checkbox" name="rules" value="watch" id="korulnez">Nézz körül, mielőtt elindulsz</label>
+            </li>
+    
+            <!-- 5. Skálás értékelés -->
+            <li>
+                <p>Mennyire tartod fontosnak a síelési szabályok betartását? (1 = egyáltalán nem fontos, 5 = nagyon fontos)</p>
+                <input type="range" name="fontossag" id="fontossag" min="1" max="5" step="1" value="3">
+            </li>
+        </ol>
+        <button type="button" value="mehet" id="myButton">Beküldés</button>
+    </form>
+    <br>
+    <br>
+    <div class="Lábléc">
+        A Weboldal kizárólag tanulmányi célokat szolgál. <br>
+        Vargha Benjámin 2024
+    </div>
+    <script src="js/beadando.js"></script>
+</body>
+</html>

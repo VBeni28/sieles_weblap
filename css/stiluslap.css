@@ -1,0 +1,902 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px; 
+    padding-bottom: 40px;
+    overflow-x: hidden;
+    background-color: #f7f7f7;
+}
+.focim {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.osztrak_alpok {
+    color: #ab1f88;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* Hamburger ikon (mobil) */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* ------ Menü alapállapotban rejtett (mobil) ------- */
+.menu {
+    display: flex;
+    flex-direction: column; /* For mobile */
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section.center.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    text-decoration: none;
+    background: #2c3e50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+/*  ---------------------------------------- */
+.menuKUKA {
+    display: none;
+    flex-direction: column;
+    background-color: #2c3e50;
+    position: absolute;
+    top: 60px; /* Fejléc magassága */
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.menu a {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #407aad;
+}
+.menu.active {
+    display: flex;
+}
+
+/*kepgaleria*/
+
+/*siszabaly*/
+.siszabaly_fejlec {
+    text-align: center;
+    margin-top: 50px;
+}
+.szabalyok {
+    display: flex;
+    flex-direction: column;
+}
+.szabaly {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+form div {
+    margin-bottom: 15px;
+}
+form label {
+    font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+input[type="submit"], input[type="reset"] {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #407aad;
+}
+.survey-form-container {
+    background-color: #eef3f7; /* Lágyabb háttérszín */
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #d0d0d0;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Kérdőív Fejléc */
+.survey-form-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Listázott Elemek */
+.survey-form-container ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+/* Kérdéseket tartalmazó elemek */
+.survey-form-container li {
+    margin-bottom: 15px;
+}
+
+/* Rádiógombok és Checkboxok */
+.survey-form-container input[type="radio"],
+.survey-form-container input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Legördülő menü */
+.survey-form-container select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Szövegbeviteli mező */
+.survey-form-container input[type="text"],
+.survey-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Range slider */
+.survey-form-container input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Beküldés gomb */
+.survey-form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.survey-form-container button:hover {
+    background-color: #407aad;
+}
+
+  
+
+
+/*siszabaly vége*/
+header {
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container {
+    padding: 15px;
+}
+
+
+form input, form select, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+label.error {
+    color: rgb(255, 47, 0);
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+form button {
+    width: 48%;
+}
+
+form button[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    height: auto;
+}
+
+form button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+/*kepgaleria vége*/
+
+.fejlec {
+    display: flex;
+    justify-content: space-between; /* Logo balra, menü jobbra */
+    align-items: center; /* Függőleges középre igazítás */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Magasabb fejléc a modern megjelenésért */
+    background-color: #2c3e50; /* Sötét szín */
+    padding: 0 20px; /* Oldalsó belső margó */
+    z-index: 1000; /* Mindig a tartalom fölött jelenjen meg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.logo a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu a {
+    text-decoration: none; /* Aláhúzás eltávolítása */
+    color: #fff; /* Fehér szín */
+    margin-left: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu a:hover {
+    background-color: #407aad; /* Kék háttér hover esetén */
+    color: #fff;
+    border-radius: 5px; /* Lekerekített sarkok */
+}
+
+.active {
+    background-color: #b0c4d7;
+    border-radius: 5px;
+}
+
+
+.statikus_háttér {background-image: url("képek/hutte2.jpg");
+    margin-top: -60px;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hutte_cim {
+    text-align: center;
+    margin-top: 20px;
+}
+.hutte_bev_szoveg {
+    display : flex;
+    flex-direction: column;
+    background-color: #2c3e50;
+    border: 2px solid #3893a1;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.germknödel, .wienerschnitzel, .apfelstrudel, .kaiserschmarrn, .laberknödel, .Kasnocken {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    text-align: center;
+}
+.germknödel-szoveg, .wienerschnitzel-szoveg, .apfelstrudel-szoveg, .kaiserschmarrn-szoveg, .laberknödel-szoveg, .Kasnocken-szoveg {
+    display: none; /* Alapértelmezésben rejtett */
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.germknödel-kep, .wienerschnitzel-kep, .apfelstrudel-kep, .kaiserschmarrn-kep, .laberknödel-kep, .Kasnocken-kep {
+    display:block;
+    width: 90%;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+input[type="button"] {
+    display: block;
+    margin: 10px auto; /* Centers the button horizontally */
+    padding: 10px 20px; /* Adds padding for a better look */
+    border-radius: 20px;
+    background-color: #2c3e50;
+    color: white; /* Makes the text visible on dark background */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Changes cursor on hover */
+    border: none; /* Removes default border */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+input[type="button"]:hover {
+    background-color: #041d32; /* Changes color on hover */
+}
+
+.etel.aktiv .etel-szoveg {
+    display: block; /* Megjelenik, ha az aktív osztály hozzá van adva */
+}
+
+
+
+.cím {
+    font-size: 20px;
+}
+.link {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+  
+#Obertauern_rész, #Kresichberg_rész, #Saalbach_rész, #StAnton_rész {
+    
+    display: flex;
+    flex-direction: column-reverse; /* Egymás alatt a szöveg és kép */
+    gap: 20px; /* Térköz a szöveg és a kép között */
+    padding: 20px;
+}
+.Obertauern_szöveg, .Kreischberg_szöveg, .Saalbach_szöveg, .StAnton_szöveg {
+    width: 100%; /* Alapértelmezett szélesség */
+    text-align: justify;
+}
+.Obertauern_kép, .Kreischberg_kép, .Saalbach_kép, .StAnton_kép {
+    width: 100%; /* Kép teljes szélesség */
+    text-align: center; /* Középre igazított kép */
+}
+.Obertauern_kép .image, .Kreischberg_kép .image, .Saalbach_kép .image, .StAnton_kép .image {
+    width: 100%;
+    max-width: 500px; /* A kép maximális szélessége */
+    height: auto; /* Automatikus méretarány */
+    border-radius: 8px; /* Kerekített sarkok */
+}
+.vonal{
+    border-top: 2px solid #ab1f88;
+    margin: 20px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+}
+.vonalhutte {
+    border-top: 2px solid #407aad;
+    margin: 20px 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    padding: 20px;
+    text-align: left;
+  }
+
+.content-wrapper {
+    margin: 20px, 20px, 0, 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.bevezető_szöveg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+
+.SIterepek_képek {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.álltalános_kép {
+    float: left;
+    width: 100%; /* Alapértelmezett: egy oszlop */
+    margin-bottom: 20px;
+    padding: 0 10px; /* Távolság a képek között */
+    box-sizing: border-box;
+}
+
+.kép_fölötti_szöveg {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Képarány: szélesség / magasság */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.image_text {
+    color: white;
+    font-size: 4vw;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Base styling for slider images */
+.slider img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 95%; /* Make slider take up most of the screen width */
+        min-width: unset; /* Remove the minimum width restriction */
+    }
+    
+    .slider img {
+        max-height: 400px; /* Reduce maximum height on smaller screens */
+    }
+    .menu {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .slider img {
+        max-height: 300px; /* Further reduce height for mobile */
+    }
+}
+
+
+@media (min-width: 600px) {
+    .fejlec {
+        flex-direction: row; 
+        height: auto; 
+    }
+    .hamburger {
+        display: none; /* Hamburger ikon eltüntetése asztali nézetben */
+    }
+    .menu {
+        display: flex; /* Menü folyamatosan látható asztali nézetben */
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        position: static;
+        width: auto;
+    }
+    .menu a {
+        border-bottom: none; /* Eltávolítjuk a mobil nézetben lévő vonalat */
+        margin-left: 15px; /* Oldaltérközök a szebb elrendezésért */
+        padding: 10px 15px;
+    }
+    
+    .vonalhutte {
+        display: none;
+    }
+    .kontenerhutte {
+        display: flex;
+        flex-wrap: wrap; /* Tördelés több sorba */
+        gap: 20px; /* Távolság az elemek között */
+        justify-content: center; /* Középre igazítja az elemeket */
+    }
+
+    .germknödel, .wienerschnitzel, .apfelstrudel, .kaiserschmarrn, .laberknödel, .Kasnocken {
+        width: calc(50% - 20px); /* Két oszlop: 50% szélesség mínusz a távolság */
+    }
+
+    .germknödel-kep, .wienerschnitzel-kep, .apfelstrudel-kep, .kaiserschmarrn-kep, .laberknödel-kep, .Kasnocken-kep {
+        width: 100%; /* Képek a konténer szélességéhez igazítva */
+    }
+
+    input[type="button"] {
+        font-size: 1vw;
+        align-self: center; /* Gomb középre helyezve a szülőn belül */
+    }
+
+    .álltalános_kép {
+        width: 48%; /* Két oszlop */
+        margin: 1%;
+    }
+
+    .image_text {
+        font-size: 2vw;
+    }
+
+    .cím {
+        font-size: 30px;
+    }
+
+
+    #Obertauern_rész, #Kresichberg_rész, #Saalbach_rész, #StAnton_rész {
+        display: block;
+        padding: 20px;
+    }
+
+    .Obertauern_szöveg, .Kreischberg_szöveg, .Saalbach_szöveg, .StAnton_szöveg {
+        text-align: justify;
+    }
+
+    .Obertauern_kép, .Saalbach_kép {
+        float: right;
+        margin: 0 0 10px 20px;
+        width: 40%;
+    }
+    .Kreischberg_kép, .StAnton_kép{
+        float: left;
+        margin: 0 20px 10px 0;
+        width: 40%;
+
+    }
+
+    .Obertauern_kép .image, .Kreischberg_kép .image, .Saalbach_kép .image, .StAnton_kép .image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .álltalános_kép {
+        width: 23%; /* Négy oszlop */
+        margin: 1%;
+    }
+
+    .image_text {
+        font-size: 1vw;
+    }
+    
+
+    .menu a {
+        font-size: 18px; /* Nagyobb betűméret */
+        margin-left: 20px; /* Nagyobb térköz */
+    }
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0066cc;
+    }
+    
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container {
+    padding: 15px;
+}
+
+
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}form input[type="checkbox"] {
+    width: auto;
+}
+
+
+form textarea {
+    resize: none;
+}
+
+form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#submit {
+    width: 48%;
+}
+#reset {
+    width: 48%;
+}
+
+form button[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    height: auto;
+}
+
+form button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0066cc;
+    }
+
+    form button {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+
+
+/*siszabaly*/
+.szabalyok {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.szabaly {
+    width: 45%;
+}
+.survey-form-container {
+    padding: 30px;
+    max-width: 700px;
+}
+
+.survey-form-container h1 {
+    font-size: 28px;
+}
+
+.survey-form-container button {
+    font-size: 18px;
+}
+/*siszabaly vége*/
+
+
+/*képgaléria */
+
+        .slider {
+            width: 80%; 
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 5px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+/**/
+
+
+    }
+
+
+.Lábléc {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color:white;
+}

@@ -1,0 +1,19 @@
+1.
+Oldal készítőjének neve : Vargha Benjámin
+
+2.
+A weblap címe:   (pl. https://github.com/...). 
+
+3.
+Weboldalad témája:
+
+4.
+JS kódod a következő oldalak tartalmaznak:
+Ennek célja:. 
+Működése: 
+
+5.
+Egyedi fonttípus alkalmazása: 
+
+6.
+Egyéb 3dparty kódok: (pl . javascript programot, css formázást): 
