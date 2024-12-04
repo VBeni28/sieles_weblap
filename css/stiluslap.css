@@ -1,0 +1,909 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px; 
+    padding-bottom: 40px;
+    overflow-x: hidden;
+    background-color: #f7f7f7;
+}
+.focim {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.osztrak_alpok {
+    color: #ab1f88;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+.menu {
+    display: none; 
+    flex-direction: column; 
+    background-color: #2c3e50;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section.center.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    text-decoration: none;
+    background: #2c3e50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.menuKUKA {
+    display: none;
+    flex-direction: column;
+    background-color: #2c3e50;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.menu a {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #407aad;
+}
+.menu.active {
+    display: flex;
+}
+
+
+
+
+.siszabaly_fejlec {
+    text-align: center;
+    margin-top: 50px;
+}
+.szabalyok {
+    display: flex;
+    flex-direction: column;
+}
+.szabaly {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+form div {
+    margin-bottom: 15px;
+}
+form label {
+    font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+input[type="submit"], input[type="reset"] {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #407aad;
+}
+.survey-form-container {
+    background-color: #eef3f7; 
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #d0d0d0;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.survey-form-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.survey-form-container ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+
+.survey-form-container li {
+    margin-bottom: 15px;
+}
+
+
+.survey-form-container input[type="radio"],
+.survey-form-container input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+.survey-form-container select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+.survey-form-container input[type="text"],
+.survey-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+.survey-form-container input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.survey-form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.survey-form-container button:hover {
+    background-color: #407aad;
+}
+
+  
+
+
+
+header {
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container {
+    padding: 15px;
+}
+
+
+form input, form select, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+label.error {
+    color: rgb(255, 47, 0);
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+form button {
+    width: 48%;
+}
+
+form button[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    height: auto;
+}
+
+form button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+
+
+.fejlec {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; 
+    background-color: #2c3e50; 
+    padding: 0 20px; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.logo a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu a {
+    text-decoration: none; 
+    color: #fff; 
+    margin-left: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu a:hover {
+    background-color: #407aad; 
+    color: #fff;
+    border-radius: 5px; 
+}
+
+.active {
+    background-color: #b0c4d7;
+    border-radius: 5px;
+}
+
+
+.statikus_hatter {
+    
+    background-image: url("../kepek/hutte.jpg");
+    margin-top: -60px;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hutte_cim {
+    text-align: center;
+    margin-top: 20px;
+}
+.hutte_bev_szoveg {
+    display : flex;
+    flex-direction: column;
+    background-color: #2c3e50;
+    border: 2px solid #3893a1;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.germknodel, .wienerschnitzel, .apfelstrudel, .kaiserschmarrn, .laberknodel, .Kasnocken {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    text-align: center;
+}
+.germknodel-szoveg, .wienerschnitzel-szoveg, .apfelstrudel-szoveg, .kaiserschmarrn-szoveg, .laberknodel-szoveg, .Kasnocken-szoveg {
+    display: none; 
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.germknodel-kep, .wienerschnitzel-kep, .apfelstrudel-kep, .kaiserschmarrn-kep, .laberknodel-kep, .Kasnocken-kep {
+    display:block;
+    width: 90%;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+input[type="button"] {
+    display: block;
+    margin: 10px auto; 
+    padding: 10px 20px; 
+    border-radius: 20px;
+    background-color: #2c3e50;
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border: none; 
+    transition: background-color 0.3s ease; 
+}
+
+input[type="button"]:hover {
+    background-color: #041d32; 
+}
+
+.etel.aktiv .etel-szoveg {
+    display: block; 
+}
+
+
+
+.cim {
+    font-size: 20px;
+}
+.link {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+  
+#Obertauern_resz, #Kresichberg_resz, #Saalbach_resz, #StAnton_resz {
+    
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 20px; 
+    padding: 20px;
+}
+.Obertauern_szoveg, .Kreischberg_szoveg, .Saalbach_szoveg, .StAnton_szoveg {
+    width: 100%; 
+    text-align: justify;
+}
+.Obertauern_kep, .Kreischberg_kep, .Saalbach_kep, .StAnton_kep {
+    width: 100%; 
+    text-align: center; 
+}
+.Obertauern_kep .image, .Kreischberg_kep .image, .Saalbach_kep .image, .StAnton_kep .image {
+    width: 100%;
+    max-width: 500px; 
+    height: auto; 
+    border-radius: 8px; 
+}
+.vonal{
+    border-top: 2px solid #ab1f88;
+    margin: 20px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+}
+.vonalhutte {
+    border-top: 2px solid #407aad;
+    margin: 20px 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    padding: 20px;
+    text-align: left;
+  }
+
+.content-wrapper {
+    margin: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.bevezeto_szoveg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+
+.SIterepek_kepek {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.alltalanos_kep {
+    float: left;
+    width: 100%; 
+    margin-bottom: 20px;
+    padding: 0 10px; 
+    box-sizing: border-box;
+}
+
+.kep_folotti_szoveg {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; 
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.image_text {
+    color: white;
+    font-size: 4vw;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.slider img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; 
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 480px) {
+    .slider img {
+        max-height: 300px; 
+    }
+}
+
+
+@media (min-width: 600px) {
+    .fejlec {
+        flex-direction: row; 
+        height: auto; 
+    }
+    .hamburger {
+        display: none; 
+    }
+    .menu {
+        display: flex; 
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        position: static;
+        width: auto;
+    }
+    .menu a {
+        border-bottom: none; 
+        margin-left: 15px; 
+        padding: 10px 15px;
+    }
+    
+    .vonalhutte {
+        display: none;
+    }
+    .kontenerhutte {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 20px; 
+        justify-content: center; 
+    }
+
+    .germknodel, .wienerschnitzel, .apfelstrudel, .kaiserschmarrn, .laberknodel, .Kasnocken {
+        width: calc(50% - 20px); 
+    }
+
+    .germknodel-kep, .wienerschnitzel-kep, .apfelstrudel-kep, .kaiserschmarrn-kep, .laberknodel-kep, .Kasnocken-kep {
+        width: 100%; 
+    }
+
+    input[type="button"] {
+        font-size: 1vw;
+        align-self: center; 
+    }
+
+    .alltalanos_kep {
+        width: 48%; 
+        margin: 1%;
+    }
+
+    .image_text {
+        font-size: 2vw;
+    }
+
+    .cim {
+        font-size: 30px;
+    }
+
+
+    #Obertauern_resz, #Kresichberg_resz, #Saalbach_resz, #StAnton_resz {
+        display: block;
+        padding: 20px;
+    }
+
+    .Obertauern_szoveg, .Kreischberg_szoveg, .Saalbach_szoveg, .StAnton_szoveg {
+        text-align: justify;
+    }
+
+    .Obertauern_kep, .Saalbach_kep {
+        float: right;
+        margin: 0 0 10px 20px;
+        width: 40%;
+    }
+    .Kreischberg_kep, .StAnton_kep{
+        float: left;
+        margin: 0 20px 10px 0;
+        width: 40%;
+
+    }
+
+    .Obertauern_kep .image, .Kreischberg_kep .image, .Saalbach_kep .image, .StAnton_kep .image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .slider {
+        width: 95%; 
+        min-width: unset; 
+    }
+    
+    .slider img {
+        max-height: 400px; 
+    }
+    .menu {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .alltalanos_kep {
+        width: 23%; 
+        margin: 1%;
+    }
+
+    .image_text {
+        font-size: 1vw;
+    }
+    
+
+    .menu a {
+        font-size: 18px; 
+        margin-left: 20px; 
+    }
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0066cc;
+    }
+    
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container {
+    padding: 15px;
+}
+
+
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}form input[type="checkbox"] {
+    width: auto;
+}
+
+
+form textarea {
+    resize: none;
+}
+
+form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#submit {
+    width: 48%;
+}
+#reset {
+    width: 48%;
+}
+
+form button[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    height: auto;
+}
+
+form button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0066cc;
+    }
+
+    form button {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+
+
+
+.szabalyok {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.szabaly {
+    width: 45%;
+}
+.survey-form-container {
+    padding: 30px;
+    max-width: 700px;
+}
+
+.survey-form-container h1 {
+    font-size: 28px;
+}
+
+.survey-form-container button {
+    font-size: 18px;
+}
+
+
+
+
+
+        .slider {
+            width: 80%; 
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 5px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+
+
+    }
+
+
+.Lablec {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color:white;
+}
